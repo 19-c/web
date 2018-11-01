@@ -1,0 +1,32 @@
+body,p{
+    background-color: #68cdd5;
+    color: white;
+    font-size: 20px;
+}
+.box_1{
+   margin-top: 2.5%;
+   margin-left: 3.7%;
+}
+.box_2{
+    margin-top: 21.4%;
+    text-align:center;
+}
+.box_3{
+    margin: 11% 14% 0% 14%;
+}
+.box_4{
+    float: left;
+    margin-left: 11%;   
+    margin-top: 22%;
+}
+.box_5{
+    background-color: #009e96;
+    border-radius: 59%;
+    margin-top: 22%;
+    margin-right: 11%;
+    padding: 0%;
+    float: right;
+    width: 87px;
+    height: 90%;
+    overflow: hidden;
+}
