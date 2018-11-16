@@ -1,0 +1,250 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.header{
+    position: fixed;
+    top: 0%;
+    height: 5rem;
+    width: 100%;
+    background-color: #5fc0cd;
+    line-height: 5rem;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    word-break: keep-all;
+    z-index: 11;
+}
+.return{
+    float: left;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+.main{
+    position: relative;
+}
+.bg{
+    background-image: url(../css-5/img/background.png);
+    height: 16rem;
+    margin-top: 4rem;
+    background-size: 100% 100%;
+    filter: blur(3px);
+}
+.woman{
+    position: absolute;
+    top: 67px;
+    left: 15px;
+    height: 8rem;
+}
+.woman>div{
+    background-color: #efefef;
+    border-radius: 59%;
+    width: 101%;
+    height: 92%;
+    overflow: hidden;
+}
+.content{
+    position: absolute;
+    top: 6.1rem;
+    left: 10rem;
+}
+.name{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 15px;
+}
+.site{
+    display: inline-flex;
+    /*vertical-align: middle;*/
+    font-size: 16px;
+    color: white;
+}
+.skill_bg{
+    position: relative;
+    height: 5.5rem;
+    border-bottom: 2px solid #efefef;
+}
+.skill{
+    position: absolute;
+    top: 28px;
+    left: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    border-left: 4px solid #5fc0cd;
+    padding-left: 15px;
+}
+.home_bg{
+    position: relative;
+    /* left: 15px; */
+    margin-left: 17px;
+    height: 5.5rem;
+    border-bottom: 2px solid #efefef;
+}
+.home{
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    font-size: 22px;
+    display: inline-flex;
+     /*vertical-align: middle;*/
+    border-right: 2px solid #efefef;
+    padding-right: 13px;
+}
+.nofood{
+    position: absolute;
+    top: 28px;
+    left: 130px;
+    font-size: 22px;
+    display: inline-flex;
+}
+.term_bg{
+    position: relative;
+    /* left: 15px; */
+    margin-left: 17px;
+    height: 5.5rem;
+    border-bottom: 2px solid #efefef;
+}
+.term{
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999999;
+    border-right: 2px solid #efefef;
+    padding-right: 31px;
+}
+.year{
+    position: absolute;
+    top: 28px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.time_bg{
+    position: relative;
+    /* left: 15px; */
+    height: 5.5rem;
+    margin-left: 17px;
+    border-bottom: 2px solid #efefef;
+}
+.time{
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999999;
+    border-right: 2px solid #efefef;
+    padding-right: 31px;
+}
+.day{
+    position: absolute;
+    top: 28px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.money_bg{
+    position: relative;
+    /* left: 15px; */
+    margin-left: 17px;
+    height: 5.5rem;
+    border-bottom: 2px solid #efefef;
+}
+.service{
+    position: absolute;
+    top: 28px;
+    left: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999999;
+    border-right: 2px solid #efefef;
+    padding-right: 31px;
+}
+.money{
+    position: absolute;
+    top: 28px;
+    left: 180px;
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+.presentation_bg{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #efefef;
+    margin-bottom: 20rem;
+    padding: 26px;
+}
+.presentation{
+    font-size: 24px;
+    color: #999999;
+    font-weight: bold;
+    margin-left: 15px;
+    border-right: 2px solid #efefef;
+    padding-right: 29px;
+    white-space: nowrap;
+}
+.details{
+    margin-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer{
+    position: fixed;
+    height: 8rem;
+    width: 100%;
+    bottom: 0%;
+    background-color: white;
+    z-index: 10;
+}
+.button1{
+    float: left;
+    border: 2px solid #5fc0cd;
+    background-color: white;
+    color: #5fc0cd;
+    border-radius: 11px;
+    font-size: 24px;
+    outline: none;
+    width: 43%;
+    height: 65%;
+    margin-left: 4%;
+    word-break: keep-all;
+}
+.button2{
+    float: right;
+    background-color: #5fc0cd;
+    border: 2px solid #5fc0cd;
+    color: white;
+    border-radius: 11px;
+    font-size: 24px;
+    width: 43%;
+    height: 65%;
+    margin-right: 4%;
+    outline: none;
+    word-break: keep-all;
+}
+/*.presentation_bg{
+    position: relative;
+    height: 5.5rem;
+    border-bottom: 2px solid #efefef;
+    margin-bottom: 20rem;
+}
+.presentation{
+    position: absolute;
+    top: 28px;
+    left: 37px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999999;
+    border-right: 2px solid #efefef;
+    padding-right: 31px;
+}
+.details{
+    position: absolute;
+    top: 28px;
+    left: 195px;
+    font-size: 24px;
+    font-weight: bold;
+}*/
