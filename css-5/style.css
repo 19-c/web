@@ -32,16 +32,21 @@
 }
 .woman{
     position: absolute;
-    top: 67px;
-    left: 15px;
-    height: 8rem;
+    top: 73px;
+    left: 22px;
 }
 .woman>div{
     background-color: #efefef;
-    border-radius: 59%;
-    width: 101%;
-    height: 92%;
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
     overflow: hidden;
+}
+.photo{
+    margin-top: 11px;
+    margin-left: 16px;
+    width: 89px;
+    height: 119px;
 }
 .content{
     position: absolute;
@@ -211,6 +216,10 @@
     height: 65%;
     margin-left: 4%;
     word-break: keep-all;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    cursor:pointer;
 }
 .button2{
     float: right;
@@ -224,6 +233,10 @@
     margin-right: 4%;
     outline: none;
     word-break: keep-all;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    cursor:pointer;
 }
 /*.presentation_bg{
     position: relative;
