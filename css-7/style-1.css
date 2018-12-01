@@ -1,0 +1,110 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: #f0f0f0;
+}
+header{
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: #29bde0;
+    color: white;
+    font-size: 2.5rem;
+    z-index: 1;
+}
+header> .menu{
+    float: left;
+    margin-left: 2%;
+    line-height: 4.5rem;
+}
+.wrap{
+    margin-top: 5.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #9a9a9a;
+}
+.main{
+    border: 1px solid #c9c9c9;
+    background-color: white;
+    width: 92%;
+    text-align: center;
+    line-height: 4.5rem;
+    font-size: 17px;
+    white-space: nowrap;
+    position: relative;
+}
+.main> .go:after,.main> .go:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border: 11px solid transparent;
+    border-left-color: #e7e7e7;
+    position: absolute;
+    top:25px;
+    right:2px;
+}
+.main> .go:after{
+    top:25px;
+    right:7px;
+    border-left-color: white;
+}
+.bottom{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottom> .content-top{
+    width: 100%;
+    color: #fbb435;
+    border-bottom: 1px solid #fbb435;
+    font-size: 18px;
+}
+.bottom> .content-next{
+    width: 69%;
+    background-color: #29bde0;
+    color: white;
+    margin: 19px 0 0 0;
+}
+.bottom> .m{
+    margin: 0;
+} 
+p{
+    font-size: 12.5px;
+    color: #9a9a9a;
+    margin: 0;
+}
+.dot{
+    width: 84px;
+    height: 26px;
+    color: white;
+    margin-bottom: 2px;
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot> div{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    margin:0 2px;
+}
+.dot> .color{
+    background-color: #29bde0;
+}
+.triangle{
+    content: "";
+    width: 0;
+    height: 0;
+    border: 23px solid transparent;
+    border-left-color: #fbb435;
+    position: absolute;
+    top:47%;
+    left:89%;
+}
