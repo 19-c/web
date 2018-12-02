@@ -104,6 +104,9 @@ main{
     margin-top: 12rem;
     margin-bottom: 9rem;
 }
+.row{
+    margin-bottom: 5%;
+}
 .row> .style{
     background-color: #f5c97b;
     border: 4px solid white;
