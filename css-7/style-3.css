@@ -11,6 +11,7 @@ header{
     align-items: center;
     font-size: 17px;
     background-color: #29bde0;
+    border-bottom: 1px solid #74d4eb;
 }
 header> .img{
     width: 25px;
@@ -63,7 +64,7 @@ main> .center{
     margin-left: 28px;
 } */
 main{
-    padding: 7% 10% 10px 10%;
+    padding: 4% 10% 10px 10%;
     background-color: #29bde0;
 }
 main>.top{
@@ -91,6 +92,9 @@ table td{
 }
 table .interval{
     text-align-last: justify;
+}
+.w-warp{
+    margin-top: 1%;
 }
 .w-warp .white{
     color: #a6a6a6;
