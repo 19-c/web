@@ -1,0 +1,156 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: #fafafa;
+}
+main p{
+    margin: 0%;
+    color: #999999;
+}
+.main-1 .size{
+    font-size: 16px;
+}
+.main-1 .color{
+    color: #29b078;
+}
+.main-1 .col-md-2{
+    margin: 35px 0;
+}
+.main-1 .border{
+    padding: 25px 0;
+    border-top: 1px solid #d0d6d9;
+    border-bottom: 1px solid #edf1f2;
+    white-space: nowrap;
+    display: flex;
+}
+.main-1 a{
+    color: black;
+    text-decoration: none;
+}
+/* .main-1 a:visited{
+    color: blue;
+    background-color: #29b078;
+} */
+.main-1 a:hover{
+    color: white;
+    background-color: #29b078;
+}
+.main-2 .daxiao{
+    color: black;
+    font-size: 16px;
+}
+.main-2 .border{
+    padding: 25px 15px;
+    border-bottom: 1px solid #d0d6d9;
+}
+.main-2 .top{
+    margin-top: 3%;
+} 
+.main-2 table{
+    word-break: break-all;
+}
+.main-2 .img-wrap{
+    width: 139px;
+    height: 139px;
+    background-image: url(../css-8/img-2/people.png);
+    background-position: -10px -1px;
+}
+.main-2 .p{
+    margin-left: 6px;
+    color: black;
+}
+.main-2 .p-2{
+    line-height: 25px;
+}
+.main-2 .margin{
+    margin-bottom: 2%;
+    margin-top: 20px;
+}
+.main-2 .table-wrap{
+    background-color: white;
+    border: 2px solid #edf1f2;
+    padding: 15px;
+}
+.main-2 .table-wrap-2{
+    background-color: white;
+}
+.main-2 .border-x{
+    padding: 0 10px;
+    border: 1px solid #edf1f2;
+    border-top: none;
+    line-height: 50px;
+    font-size: 12px;
+}
+.main-2 i{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    margin-left: 12px;
+    width: 16px;
+    height: 15px;
+    background-image: url(../css-8/img-2/star.png);
+    background-size: 100% 100%;
+}.main-2 .red{
+    color: red;
+}
+.main-2 .padding-s{
+    text-align: center;
+    color: #999999;
+    border: 1px solid #edf1f2;
+}
+.main-2 .s-c{
+    color: black;
+    padding-left: 10%;
+}
+.main-2 .jl{
+    margin-left: 43%;
+    margin-right: 5%;
+}
+.main-2 .b-size{
+    font-size: 14px;
+    padding-left: 10px;
+}
+.main-2 .hover{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+.main-2 .interim{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 0;
+    padding: 0 40px;
+    background: rgba(0, 0, 0, .76);
+    transition: 1s;
+}
+.main-2 .hover:hover .interim{
+    height: 100%;
+    padding: 60px 40px;
+    opacity: 1;
+}
+.main-2 .hover-p-bottom{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.main-2 .hover-p-color{
+    color: white;
+}
+@media screen and (max-width: 768px){
+    .main-1 .border{
+        text-align: center;
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 450px){
+    .main-2 .p-2{
+        padding-top: 25px;
+    }
+}
+@media screen and (max-width: 375px){
+    .main-2 .p-2{
+        line-height: 15px;
+    }
+}
