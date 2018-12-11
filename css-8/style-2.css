@@ -138,6 +138,9 @@ main p{
 .main-2 .hover-p-color{
     color: white;
 }
+.chu{
+    font-weight: bold;
+}
 @media screen and (max-width: 768px){
     .main-1 .border{
         text-align: center;

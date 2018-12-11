@@ -80,7 +80,25 @@ footer .wrap-2{
 footer .img{
     position: absolute;
     right: 15%;
-    top:10%;
+    top:13%;
+}
+.not:hover{
+    text-decoration: none;
+}
+.bkuan{
+    width: 30%;
+}
+@media screen and (max-width:3000px){
+    .bai{
+        border-bottom: 4px solid;
+        padding-bottom: 45%
+    }
+}
+@media screen and (max-width: 1200px){
+    .bai{
+        border-bottom: 4px solid;
+        padding-bottom: 56%
+    }
 }
 @media screen and (max-width: 1000px){
     header .img{
@@ -103,6 +121,10 @@ footer .img{
     }
     footer{
         height: auto;
+    }
+    .bai{
+        border-bottom: 4px solid;
+        padding-bottom: 82%;
     }
 }
 @media screen and (max-width: 750px){
