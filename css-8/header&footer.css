@@ -24,16 +24,21 @@ header .cnt-wrap{
     background-color: #29b078;
     height: 100px;
 }
-header .jns{
+.tu{
+    line-height: 100px;
+}
+/* header .jns{
     color: white;
     font-size: 35px;
-}
-header .l{
+} */
+/* header .l{
     margin-top: 20px;
+    
 }
 header .s{
     font-size: 10px;
-}
+   
+} */
 header .gai{
     text-align: center;
     font-size: 17px;
