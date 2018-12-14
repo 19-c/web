@@ -1,0 +1,323 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-size: 16px;
+}
+button{
+    border: none;
+    outline: none;
+}
+a{
+    text-decoration: none!important;
+}
+header{
+    background-color: #1d7ad9;
+    color: white;
+}
+header .button, .main-1 .button{
+    text-align: right;
+}
+header .center{
+    line-height: 40px;
+    font-size: 14px;
+}
+header .style{
+    color: white;
+    background-color: #1d7ad9;
+    height: 40px;
+    width: 60px;
+}
+header .style:hover{
+    background-color: white;
+    width: 100px;
+    color: black;
+}
+.main-1{
+    background-color: #f9f9f9;
+    height: 100px;;
+}
+.main-1 .button{
+    margin-top: 30px;
+}
+.main-1 .center{
+    padding: 10px 22px;
+    margin-left: 4%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 1px #cccccc;
+}
+.main-1 .center:hover{
+    background-color: #1d7ad9;
+    color: white;
+}
+.main-2 .wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 0 50px 0;
+}
+.main-2 a{
+    color: #cccccc;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    position: relative;
+}
+.main-2 a::before{
+    content: '';
+    position: absolute;
+    margin-top: 10px;
+    height: 5px;
+    width: 100%;
+    background: #cccccc;
+    z-index: -1;
+}
+.main-2 .circle{
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    color: white;
+    margin-bottom: 30px;
+}
+.main-2 a:hover{
+    color: #ff7f02;
+}
+.main-2 a:hover .circle,.main-2 a:hover::before {
+    background-color: #ff7f02;
+}
+.main-3 .lanbian{
+    font-size: 22px;
+    border-left: 3px solid #1d7ad9;
+    padding-left: 15px;
+}
+.main-3 .top-wrap{
+    background-color: #f4f4f4;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+.main-3 .img{
+    /* width: 45px;
+    height: 45px;
+    background-image: url(../css-10/img/box.png);
+    background-position: 13px 15px;
+    background-repeat: no-repeat; */
+    padding: 0 15px 0 20px;
+}
+.main-3 .color{
+    color: #1d7ad9;
+    margin: 0;
+}
+input[type="radio"] + label::before {
+    content: "\a0";
+    display: inline-block;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid #d6d6d6;
+    background-color: #f8f9fb;
+    line-height: 1; 
+}
+input[type="radio"]:checked + label::before {
+    background-color: blue;
+    border: 1px solid blue;
+}
+input[type="radio"]:checked + label::after{
+    content: "";
+    background-color: white;
+    border: white;
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    left: 7px;
+    top: 7px;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+label{
+    font-weight: 100;
+    margin: 0%;
+    position: relative;
+}
+.main-3 .bottom-wrap{
+    background-color: #fbfcff;
+    border: 1px solid #e7e7e7;
+    margin: 0 15px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+}
+.main-3 .jianju{
+    margin-left: 5%;
+}
+.main-3 .height{
+    text-align: right;
+}
+.main-3 select{
+    width: 140px;
+    height: 40px;
+    outline: none;
+    border: 1px solid #d6d6d6;
+    color: #a9a9a9;
+    padding-left: 10px;
+    background: url(../css-10/img/xiala.png) no-repeat;
+    background-position: 109px 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+}
+input[type="text"]{
+    width: 75px;
+    height: 30px;
+    border: 1px solid #d6d6d6;
+    background-color: #fbfcff;
+}
+.main-3 .bottom{
+    margin-bottom: 25px;
+}
+.main-3 .other{
+    margin-bottom: 30px;
+    background-color: white;
+    height: 285px;
+    justify-content: center;
+}
+.main-3 .b-other{
+    border-radius: 5px;
+    color: white;
+    background-color: #e15053;
+    padding: 10px 5%;
+}
+footer .top{
+    background-color: #f9f9f9;
+    padding: 45px 0;
+}
+footer a, footer p{
+    color: #a9a9a9;
+    font-size: 14px;
+}
+footer .bold{
+    font-weight: bold;
+}
+footer .center{
+    text-align: center;
+}
+footer .foot, .foot p{
+    background-color: #1d7ad9;
+    padding: 5px 0;
+    color: white;
+    margin: 0;
+    font-size: 12px;
+}
+footer .block{
+    display: inline-block;
+    vertical-align: middle;
+}
+footer .flex{
+    display: flex;
+    justify-content: flex-end;
+}
+footer .er{
+    margin-left: 15px;
+}
+footer .clr-999{
+    margin: 0 3%;
+}
+footer .more{
+    margin-left: 17%;
+}
+@media screen and (max-width: 1200px) and (min-width: 1000px){
+    .main-3 .ye{
+        margin-left: 5%;
+        margin-top: 2%;
+    }
+    .main-3 .height{
+        margin-right: 2%;
+    }
+}
+@media screen and (max-width: 1000px){
+    .main-2 a{
+        width: 20%;
+    }
+    footer .more{
+        margin: 0;
+    }
+    footer .m-mt{
+        margin-top: 15px;
+    }
+    footer .clr-999{
+        margin-right: 2%;
+    }
+}
+@media screen and (max-width: 600px){
+    .main-2 a{
+        width: 100%;
+    }
+    .main-1 .center{
+        padding: 7px;
+        margin-left: 1%;
+    }
+}
+@media screen and (max-width: 400px){
+    header .style{
+        width: auto;
+    }
+    header .center, .main-2 p{
+        font-size: 13px;
+    }
+    .main-3 .lanbian{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1000px) and (min-width: 570px){
+    .main-3 .bottom-wrap{
+        justify-content: space-between;
+        height: auto;
+    }
+    .main-3 .flex-ck{
+        display: flex;
+    }
+    .main-3 .flex-column{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-3 .jianju{
+        margin: 15px;
+    }
+    .main-3 .other{
+        height: 285px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .main-3 .bottom-wrap{
+        justify-content: space-between;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+    .main-3 .flex-ck{
+        display: flex;
+        /* width: auto; */
+        flex-direction: column;
+    }
+    .main-3 .flex-column{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-3 .jianju{
+        margin: 15px;
+    }
+    .main-3 .other{
+        height: 285px;
+        justify-content: center;
+    }
+}
