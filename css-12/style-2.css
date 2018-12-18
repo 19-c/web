@@ -74,6 +74,7 @@ header .place {
   width: 100%;
   text-align-last: center;
   color: #999999;
+  background-color: #ffffff;
 }
 
 .select select .no-b {
