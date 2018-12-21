@@ -1,0 +1,149 @@
+$clr-blue: #29bde0;
+$clr-skyblue: #b9e9f5;
+$clr-orange: #fbb435;
+$clr-white: #ffffff;
+$clr-black: #464646;
+$clr-red: #f66f6f;
+$clr-gray: #a6a6a6;
+$clr-gray-border: #dddddd;
+
+$size-17: 17px;
+$size-13: 13px;
+$size-15: 15px;
+$size-20: 20px;
+
+$border: 1px solid $clr-gray-border;
+$border2: 1px solid $clr-skyblue;
+
+@mixin flex-a($a) {
+    display: flex;
+    align-items: $a;
+}
+@mixin flex-aj($a, $b) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+}
+@mixin flex-af($a,$b){
+    display: flex;
+    align-items:$a;
+    flex-direction: $b;
+}
+@mixin flex-ajf($a, $b, $c) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+    flex-direction: $c;
+}
+@mixin fixed {
+    position: fixed;
+    width: 100%;
+    background-color: $clr-blue;
+}
+@mixin w-h($a, $b) {
+    width: $a;
+    height: $b;
+}
+
+html {
+    font-size: 62.5%;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    color: $clr-white;
+}
+p {
+    margin: 0;
+    padding: 0;
+    font-size: $size-13;
+}
+a {
+    text-decoration: none;
+    color: $clr-white;
+}
+
+
+header{
+    @include flex-aj(center,space-between );
+    font-size: $size-17;
+    background-color: $clr-blue;
+    border-bottom: $border2;
+    color: $clr-white;
+    >img{
+        @include w-h(25px,25px );
+        margin: 3%;
+    }
+}
+main{
+    padding: 4% 10% 10px 10%;
+    background-color: $clr-blue;
+    .top{
+        text-align: center;
+        >img{
+            width: 220px;
+        }
+    }
+    .middle{
+        .p-top{
+            font-size: $size-17;
+            color: $clr-orange;
+            margin-top: 3%;
+            letter-spacing: 2px;
+            margin-bottom: 5%;
+        }
+    }
+    table{
+        font-size: $size-13;
+        margin-left: -3px;
+        td{
+            width: 50px;
+        }
+        .interval{
+            text-align-last: justify;
+        }
+    }
+}
+.w-warp{
+    margin-top: 1%;
+    .white{
+        color: $clr-gray;
+        font-size: $size-13;
+        border-bottom: $border;
+        .day{
+            margin-left: 10%;
+            margin-right: 44%;
+            margin-bottom: 3%;
+            font-size: $size-15;
+            color: $clr-black;
+            margin-top: 3%;
+        }
+        .time{
+            font-size: 10px;
+        }
+        .juli{
+            margin-top: 1%;
+            margin-left: 10%;
+            margin-bottom: 1%;
+        }
+    }
+}
+footer{
+    @include fixed();
+    bottom: 0;
+    @include w-h(100%,6rem );
+    background-color: rgba(41,189,224,0.5);
+    @include flex-aj(center,center );
+    font-size: $size-20;
+    .button{
+        @include w-h(35%,50px );
+        text-align: center;
+        line-height: 50px;
+        background-color: $clr-red;
+        border-radius: 7px;
+    }
+    .color{
+        background-color: $clr-orange;
+        margin-left: 10%;
+    }
+}
