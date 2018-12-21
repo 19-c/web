@@ -150,10 +150,11 @@ main{
 			    @include w-h(100%,8vw);
 			    border: $border;
 			    .icon1, .icon2, .icon3, .icon4 {
-                    display: inline-block;
-                    @include w-h(3vw,3vw);
+                    @include w-h(5vw,5vw);
+                    background-repeat: no-repeat;
+                    background-size: 3vw 3vw;
+                    background-position: 1vw 1vw;
                     background-color: #fff;
-                    background-size: 100% 100%;
                 }
                 .icon1 {
                 	background-image: url(../css-13/img-2/dao.png);

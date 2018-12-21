@@ -140,11 +140,12 @@ main .player .box .choose {
 }
 
 main .player .box .choose .icon1, main .player .box .choose .icon2, main .player .box .choose .icon3, main .player .box .choose .icon4 {
-  display: inline-block;
-  width: 3vw;
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+  background-size: 3vw 3vw;
+  background-position: 1vw 1vw;
   background-color: #fff;
-  background-size: 100% 100%;
 }
 
 main .player .box .choose .icon1 {
