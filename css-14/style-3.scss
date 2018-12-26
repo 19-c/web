@@ -1,0 +1,139 @@
+$clr-green: #29b078;
+$clr-gray-8: #888;
+$clr-gray-666: #e6e6e6;
+$clr-gray-9: #999;
+$clr-bgc: #fafafa;
+$clr-white: #fff;
+$clr-orange: #ff5c00;
+$clr-bg-orange: #f9a372;
+
+$border-666: 1px solid $clr-gray-666;
+$border-o: 1px solid $clr-orange;
+
+$size-16: 16px;
+
+@mixin flex-a($a) {
+    display: flex;
+    align-items: $a;   
+}
+@mixin flex-j($a) {
+    display: flex;
+    justify-content: $a;  
+}
+@mixin flex-f($a) {
+    display: flex;
+    flex-direction: $a;
+}
+@mixin flex-aj($a,$b) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+}
+@mixin flex-af($a,$b) {
+    display: flex;
+    align-items: $a;
+    flex-direction: $b;
+}
+@mixin flex-ajf($a,$b,$c) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+    flex-direction: $c;
+}
+@mixin w-h($a,$b) {
+    width: $a;
+    height: $b;    
+}
+
+body{
+    background-color: $clr-bgc;
+}
+.main-1{
+    img{
+        @include w-h(100%, auto);
+    }
+    .margin{
+        margin: 30px 0;
+    }
+    .color{
+        color: $clr-green;
+    }
+}
+.main-2{
+    .wrap{
+        text-align: center;
+        background-color: $clr-white;
+    }
+    .size{
+        font-size: $size-16;
+        padding: 19px 0;
+        border-bottom: $border-666;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    ul{
+        list-style: none;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    a{
+        color: $clr-green;
+        line-height: 40px;
+        &::before{
+            content: '';
+            display: inline-block;
+            @include w-h(10px, 10px);
+            margin-right: 5px;
+            border: $border-o;
+            border-radius: 50%;
+        }
+        &:hover{
+            color: $clr-orange;
+            &::before{
+                background-color: $clr-bg-orange;
+            }
+        }
+    }
+    .text{
+        text-align: left;
+    }
+    .img-head{
+        padding: 30px;
+        border-bottom: $border-666;
+    }
+    .tudou{
+        @include w-h(160px, 110px);
+        background-image: url(../css-14/img-3/tudou.png);
+        display: inline-block;
+        background-position: -30px -30px;
+    }
+    .yangshi{
+        display: inline-block;
+        width: 78%;
+        margin: 0;
+    }
+    .p-main{
+        padding: 30px;
+    }
+    p{
+        color: $clr-gray-9;
+        margin-bottom: 45px;
+        line-height: 30px;
+    }
+    .yangshi, .p-main{
+        text-indent: 30px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .main-2 {
+        .img-head{
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 1000px){
+    .img-head{
+        border-top: $border-666;
+    }
+}

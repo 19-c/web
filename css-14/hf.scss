@@ -1,0 +1,210 @@
+$clr-green: #29b078;
+$clr-green-menu: #38c58a;
+$clr-white: #fff;
+$clr-rgb-02: rgba(0, 0, 0, 0.2);
+$clr-rgb-03: rgba(0, 0, 0, 0.3);
+
+$size-17: 17px;
+
+$border: 1px solid $clr-green-menu;
+
+@mixin relative-trbl($a, $b, $c, $d) {
+    position: relative;
+    top: $a;
+    right: $b;
+    bottom: $c;
+    left: $d;
+}
+@mixin absolute-trbl($a, $b, $c, $d) {
+    position: absolute;
+    top: $a;
+    right: $b;
+    bottom: $c;
+    left: $d;
+}
+@mixin flex-a($a) {
+    display: flex;
+    align-items: $a;
+}
+@mixin flex-j($a) {
+    display: flex;
+    justify-content: $a;
+}
+
+header{
+    @include relative-trbl(0,0 ,0 ,0 );
+    background-color: $clr-white;
+    p{
+        margin: 0;
+    }
+    .height{
+        height: 40px;
+    }
+    .tel{
+        line-height: 40px;
+        color: $clr-green;
+    }
+    .jianju{
+        @include flex-j(space-around);
+        margin-top: 8px;
+        padding-right: 0;
+        list-style: none;
+    }
+    .cnt-wrap{
+        background-color: $clr-green;
+        height: 100px;
+    }
+    .tu{
+        height: 100px;
+        @include flex-a(center);
+    }
+    .gai{
+        text-align: center;
+        font-size: $size-17;
+        line-height: 100px;
+        padding-right: 0;
+        display: inline-block;
+        &:hover{
+            .dropdown{
+                display: block;
+            }
+        }
+    }
+    .lianjie{
+        color: $clr-white;
+        &:hover{
+            color: $clr-white;
+        }
+    }
+    .dropdown{
+        display: none;
+        background-color: $clr-white;
+        height: 5px;
+        margin-top: -5px;
+    }
+}
+footer{
+    background-color: $clr-green;
+    color: $clr-white;
+    @include relative-trbl(0,0 ,0 ,0 );
+    .wrap{
+        padding-top: 30px;
+    }
+    a{
+        color: $clr-white;
+        &:hover{
+            color: $clr-white;
+        }
+    }
+    .bottom{
+        margin-bottom: 20px;
+    }
+    .width{
+        width: 130px;
+    }
+    .wrap-2{
+        padding: 1% 0;
+        border-top: $border;
+    }
+    .img{
+        @include absolute-trbl(13%, 15%, 0, 0 );
+    }
+    .bkuan{
+        width: 30%;
+    }
+}
+@media screen and (max-width:3000px){
+    header{
+        .bai{
+            border-bottom: 4px solid;
+            padding-bottom: 42%
+        }
+    }
+}
+@media screen and (max-width: 1200px){
+    header{
+        .bai{
+            border-bottom: 4px solid;
+            padding-bottom: 52%
+        }
+    }
+}
+@media screen and (max-width: 1000px){
+    header {
+        .img{
+            height: auto;
+        }
+        .jianju {
+            margin-top: 8px;
+            display: table-cell;
+            @include absolute-trbl(0, 0, 0, 80%);
+        }
+        .bottom-wrap{
+            @include absolute-trbl(45px, 0, 0, 65%);
+        }
+        .col-md-8{
+            float: left;
+        }
+        .bai{
+            border-bottom: 4px solid;
+            padding-bottom: 75%;
+        }
+    }
+    footer{
+        height: auto;
+    }
+}
+@media screen and (max-width: 750px){
+    header{
+        .bottom-wrap, .jianju{
+            display: none;
+        }
+        .jianju-2{
+            @include absolute-trbl(10px, 0, 0, 78%);
+        }
+        .yanse{
+            color: $clr-green;
+        }
+        .height, .cnt-wrap{
+            height: auto;
+        }
+        .column{
+            display: none;
+        }
+        input[type='checkbox']{
+            display: none;
+        }
+        input[type="checkbox"]:checked ~ ul{
+            display: block;
+        }
+        .meun{
+            margin-top: 100px;
+        }
+        label{
+            @include absolute-trbl(-70px, 0, 0, 81%);
+            width: 40px;
+            height: 40px;
+            background: $clr-rgb-02;
+            color: $clr-rgb-03;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 46px;
+        }
+        .dian{
+            list-style: none;
+            text-align: center;
+            line-height: 35px;
+            &:hover{
+                background: $clr-green-menu;
+            }
+        }
+    }
+}
+@media screen and (max-width:3000px) and (min-width:750px){
+    header{
+        .jianju-2, .meun{
+            display: none;
+        }
+    } 
+}

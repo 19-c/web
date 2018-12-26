@@ -1,0 +1,227 @@
+$clr-bgc: #fafafa;
+$clr-gray-9: #999;
+$clr-gray-069: #d0d6d9;
+$clr-gray-table: #edf1f2;
+$clr-green: #29b078;
+$clr-white: #fff;
+$clr-black: #000;
+$clr-red: #f01400;
+
+$size-16: 16px;
+$size-12: 12px;
+$size-14: 14px;
+
+$border: 1px solid $clr-gray-table;
+$border-069: 1px solid $clr-gray-069;
+
+@mixin flex-a($a) {
+    display: flex;
+    align-items: $a;   
+}
+@mixin flex-j($a) {
+    display: flex;
+    justify-content: $a;  
+}
+@mixin flex-f($a) {
+    display: flex;
+    flex-direction: $a;
+}
+@mixin flex-aj($a,$b) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+}
+@mixin flex-af($a,$b) {
+    display: flex;
+    align-items: $a;
+    flex-direction: $b;
+}
+@mixin flex-ajf($a,$b,$c) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+    flex-direction: $c;
+}
+@mixin w-h($a,$b) {
+    width: $a;
+    height: $b;    
+}
+
+body {
+    background-color: $clr-bgc;
+}
+main {
+    p {
+        color: $clr-gray-9;
+    }
+    table{
+        border: $border;
+        td{
+            border: $border;
+            border-top: transparent;
+        }
+    }
+}
+.main-1{
+    .size{
+        font-size: $size-16;
+    }
+    .color{
+        color: $clr-green;
+    }
+    .col-md-2{
+        margin: 35px 0;
+    }
+    .border{
+        padding: 25px 0;
+        border-top: $border-069;
+        border-bottom: $border;
+        white-space: nowrap;
+        display: flex;
+    }
+    a{
+        color: $clr-black;
+        &:hover{
+            color: $clr-white;
+            background-color: $clr-green;
+        }
+    }
+}
+.main-2{
+    .none{
+        border: none;
+    }
+    .daxiao{
+        color: $clr-black;
+        font-size: $size-16;
+    }
+    .border{
+        padding: 25px 15px;
+        border-bottom: $border-069;
+    }
+    .top{
+        margin-top: 3%;
+    }
+    table{
+        word-break: break-all;
+        border: none;
+    }
+    .img-wrap{
+        @include w-h(139px, 139px);
+        background-image: url(../css-14/img-2/people.png);
+        background-position: -10px -1px;
+    }
+    .p{
+        margin-left: 6px;
+        color: $clr-black;
+    }
+    .p-2{
+        line-height: 25px;
+    }
+    .margin{
+        margin-bottom: 2%;
+        margin-top: 20px;
+    }
+    .table-wrap{
+        background-color: $clr-white;
+        border: $border;
+        border-bottom: transparent;
+        padding: 15px;
+    }
+    .table-wrap-2{
+        background-color: $clr-white;
+    }
+    .border-x{
+        padding: 0 10px;
+        border-top: none;
+        line-height: 50px;
+        font-size: $size-12;
+    }
+    i{
+        @include w-h(16px, 15px);
+        display: inline-block;
+        position: relative;
+        top: 2px;
+        margin-left: 12px;
+        background-image: url(../css-14/img-2/star.png);
+        background-size: 100% 100%;
+    }
+    .red{
+        color: $clr-red;
+    }
+    .padding-s{
+        text-align: center;
+        color: $clr-gray-9;
+        border: $border;
+    }
+    .ji{
+        margin: 0 5% 0 43%;
+    }
+    .b-size{
+        font-size: $size-14;
+        padding-left: 10px;
+    }
+    .hover{
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        &:hover{
+            .interim{
+                height: 100%;
+                padding: 60px 40px;
+                opacity: 1;
+            }
+        }
+    }
+    .interim{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        height: 0;
+        padding: 0 40px;
+        background: rgba(0, 0, 0, .76);
+        transition: 1s;
+    }
+    .hover-p-bottom{
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .hover-p-color{
+        color: $clr-white;
+    }
+    .chu{
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 768px){
+    .main-1 {
+        .border{
+            text-align: center;
+            display: block;
+        }
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 450px){
+    .main-2 {
+        .p-2{
+            padding-top: 25px;
+        }
+    }
+}
+@media screen and (max-width: 375px){
+    .main-2 {
+        .p-2{
+            line-height: 15px;
+        }
+    }
+}
+@media screen and (max-width: 370px){
+    .main-2 {
+        .border-350{
+            padding: 0 0 0 1px;
+        }
+        .jl{
+            margin-left: 30%;
+        }
+    }
+}
