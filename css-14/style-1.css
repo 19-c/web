@@ -11,6 +11,14 @@ main p {
   color: #999;
 }
 
+.main-1 h4 {
+  margin-bottom: 30px;
+}
+
+.main-1 .size-18 {
+  font-size: 18px;
+}
+
 .main-1 .flex-wrap {
   margin-top: 80px;
   padding-bottom: 20px;
@@ -20,6 +28,9 @@ main p {
 .main-1 .icon-wrap {
   margin-bottom: 35px;
   height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .main-1 .help {
@@ -77,6 +88,7 @@ main p {
 .main-2 .size {
   width: 50%;
   color: #999;
+  font-size: 14px;
 }
 
 .main-2 .margin {
@@ -172,6 +184,12 @@ main p {
 
 .main-5 a {
   color: #999;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.main-5 a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1200px) {

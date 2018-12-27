@@ -5,6 +5,8 @@ $clr-rgb-02: rgba(0, 0, 0, 0.2);
 $clr-rgb-03: rgba(0, 0, 0, 0.3);
 
 $size-17: 17px;
+$size-14: 14px;
+
 
 $border: 1px solid $clr-green-menu;
 
@@ -30,12 +32,20 @@ $border: 1px solid $clr-green-menu;
     display: flex;
     justify-content: $a;
 }
-
+header, footer{
+    font-size: $size-14;
+}
 header{
     @include relative-trbl(0,0 ,0 ,0 );
     background-color: $clr-white;
     p{
         margin: 0;
+    }
+    a{
+        text-decoration: none;
+        // &:visited{
+        //     text-decoration: none;
+        // }
     }
     .height{
         height: 40px;
@@ -86,14 +96,21 @@ header{
 footer{
     background-color: $clr-green;
     color: $clr-white;
-    @include relative-trbl(0,0 ,0 ,0 );
+    @include relative-trbl(0, 0, 0, 0);
     .wrap{
         padding-top: 30px;
     }
     a{
         color: $clr-white;
+        text-decoration: none;
         &:hover{
             color: $clr-white;
+            text-decoration: underline;
+        }
+    }
+    .not{
+        &:hover{
+            text-decoration: none;
         }
     }
     .bottom{
@@ -107,7 +124,7 @@ footer{
         border-top: $border;
     }
     .img{
-        @include absolute-trbl(13%, 15%, 0, 0 );
+        @include absolute-trbl(13%, 15%, auto, auto);
     }
     .bkuan{
         width: 30%;
@@ -125,7 +142,7 @@ footer{
     header{
         .bai{
             border-bottom: 4px solid;
-            padding-bottom: 52%
+            padding-bottom: 53%
         }
     }
 }
@@ -147,7 +164,7 @@ footer{
         }
         .bai{
             border-bottom: 4px solid;
-            padding-bottom: 75%;
+            padding-bottom: 76%;
         }
     }
     footer{

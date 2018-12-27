@@ -10,7 +10,7 @@ $clr-bg-orange: #f9a372;
 $border-666: 1px solid $clr-gray-666;
 $border-o: 1px solid $clr-orange;
 
-$size-16: 16px;
+$size-14: 14px;
 
 @mixin flex-a($a) {
     display: flex;
@@ -48,6 +48,9 @@ $size-16: 16px;
 body{
     background-color: $clr-bgc;
 }
+main{
+    font-size: $size-14;
+}
 .main-1{
     img{
         @include w-h(100%, auto);
@@ -65,7 +68,6 @@ body{
         background-color: $clr-white;
     }
     .size{
-        font-size: $size-16;
         padding: 19px 0;
         border-bottom: $border-666;
         font-weight: bold;
@@ -115,14 +117,13 @@ body{
     }
     .p-main{
         padding: 30px;
+        margin-bottom: 15%;
+        text-indent: 30px;
     }
     p{
         color: $clr-gray-9;
         margin-bottom: 45px;
         line-height: 30px;
-    }
-    .yangshi, .p-main{
-        text-indent: 30px;
     }
 }
 @media screen and (max-width: 1200px){

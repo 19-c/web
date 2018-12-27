@@ -1,3 +1,7 @@
+header, footer {
+  font-size: 14px;
+}
+
 header {
   position: relative;
   top: 0;
@@ -9,6 +13,10 @@ header {
 
 header p {
   margin: 0;
+}
+
+header a {
+  text-decoration: none;
 }
 
 header .height {
@@ -82,10 +90,16 @@ footer .wrap {
 
 footer a {
   color: #fff;
+  text-decoration: none;
 }
 
 footer a:hover {
   color: #fff;
+  text-decoration: underline;
+}
+
+footer .not:hover {
+  text-decoration: none;
 }
 
 footer .bottom {
@@ -105,8 +119,8 @@ footer .img {
   position: absolute;
   top: 13%;
   right: 15%;
-  /* bottom: 0;
-  left: 0; */
+  bottom: auto;
+  left: auto;
 }
 
 footer .bkuan {
@@ -123,7 +137,7 @@ footer .bkuan {
 @media screen and (max-width: 1200px) {
   header .bai {
     border-bottom: 4px solid;
-    padding-bottom: 52%;
+    padding-bottom: 53%;
   }
 }
 
@@ -152,7 +166,7 @@ footer .bkuan {
   }
   header .bai {
     border-bottom: 4px solid;
-    padding-bottom: 75%;
+    padding-bottom: 76%;
   }
   footer {
     height: auto;
