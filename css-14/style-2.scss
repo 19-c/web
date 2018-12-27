@@ -150,6 +150,9 @@ main {
     .s-c{
         color: $clr-black;
     }
+    .flex-b{
+        @include flex-aj(center, space-between);
+    }
     .red{
         color: $clr-red;
     }
@@ -158,9 +161,9 @@ main {
         color: $clr-gray-9;
         border: $border;
     }
-    .jl{
-        margin: 0 5% 0 43%;
-    }
+    // .jl{
+    //     margin: 0 5% 0 43%;
+    // }
     .b-size{
         font-size: $size-14;
         padding-left: 10px;
@@ -224,9 +227,9 @@ main {
         .border-350{
             padding: 0 0 0 1px;
         }
-        .jl{
-            margin-left: 30%;
-        }
+        // .jl{
+        //     margin-left: 30%;
+        // }
         .p{
             font-size: 14px;
         }

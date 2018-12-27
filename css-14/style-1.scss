@@ -2,6 +2,7 @@ $clr-green: #29b078;
 $clr-white: #fff;
 $clr-gray-9: #999;
 $clr-gray-8: #888;
+$clr-bgc: #fafafa;
 
 $size-18: 18px;
 $size-14: 14px;
@@ -40,9 +41,12 @@ $size-14: 14px;
     height: $b;    
 }
 
+body{
+    background-color: $clr-bgc;
+}
 main{
     .juzhong {
-        padding: 60px 0 20px 0;
+        padding: 100px 0 73px 0;
         text-align: center;
     }
     .left{
@@ -99,7 +103,7 @@ main{
         @include flex-aj(center, space-between);
     }
     .juzhong{
-        padding: 60px 0 20px 0;
+        padding: 100px 0 73px 0;
         text-align: center;
     }
     .circle{
@@ -126,6 +130,9 @@ main{
         padding: 20px 0;
         background-color: $clr-white;
         box-shadow: 0 0 7px $clr-gray-8;
+        h4{
+            margin: 30px 0;
+        }
     }
     .icon-wrap{
         @include w-h(108px, 108px);
@@ -137,9 +144,6 @@ main{
     }
     p{
         width: 87%;
-    }
-    h4{
-        margin: 30px 0;
     }
     .dot{
         color: $clr-white;
@@ -158,6 +162,7 @@ main{
    }
 }
 .main-4{
+    margin-bottom: 95px;
     .color{
         background-color: $clr-white;
         height: 191px;
@@ -193,6 +198,9 @@ main{
         &:hover{
             text-decoration: underline;
         }
+    }
+    h4{
+        padding: 22px 0 29px 0;
     }
 
 }

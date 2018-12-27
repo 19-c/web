@@ -122,6 +122,12 @@ main table td {
   color: #000;
 }
 
+.main-2 .flex-b {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .main-2 .red {
   color: #f01400;
 }
@@ -130,10 +136,6 @@ main table td {
   text-align: center;
   color: #999;
   border: 1px solid #edf1f2;
-}
-
-.main-2 .jl {
-  margin: 0 5% 0 43%;
 }
 
 .main-2 .b-size {
@@ -198,9 +200,6 @@ main table td {
 @media screen and (max-width: 370px) {
   .main-2 .border-350 {
     padding: 0 0 0 1px;
-  }
-  .main-2 .jl {
-    margin-left: 30%;
   }
   .main-2 .p {
     font-size: 14px;
