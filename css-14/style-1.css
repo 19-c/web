@@ -104,6 +104,7 @@ main p {
   align-items: center;
   flex-direction: column;
   padding: 20px 0;
+  margin-bottom: 2%;
   background-color: #fff;
   box-shadow: 0 0 7px #888;
 }
