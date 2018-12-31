@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<meta charset="UTF-8">
+				<title>随机九宫格</title>
+				<style>
+				*{
+    padding: 0;
+    margin: 0;
+}
+.content{
+    width: 400px;
+    height:350px;
+    position: absolute;
+    top:15%;
+    left:35%;
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    background-image: url("../img/4.jpg");
+    box-shadow: 0 0 5px #cccccc;
+}
+#ul{
+    margin:8px auto;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-around;
+    box-sizing: border-box;
+
+}
+#ul li{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.li_div{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 0 5px #cccccc;
+    background-color: #eaa6e8;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 80px;
+}
+.btn{
+    width:400px;
+    height: auto;
+}
+.btn form >input{
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #cccccc;
+    background-color: #eaaeae;
+    border-radius: 10px;
+    margin:auto 22px;
+    cursor: pointer;
+}
+</style>
+				<script>
+					var list; //声明全局变量
+window.onload = function () {
+    list=document.getElementsByClassName("li_div");
+};
+
+var one,two,three;
+function begin() {
+    recolor();
+    //随机产生3个数字
+    var leng=list.length;
+    one = Math.floor(Math.random()*leng);
+    two = Math.floor(Math.random()*leng);
+    three = Math.floor(Math.random()*leng);
+    //以防随机数相同
+    if(one === two){
+        one = Math.floor(Math.random()*leng);
+    }
+    else if(two === three){
+        two = Math.floor(Math.random()*leng);
+    }
+    else if(three === one){
+        three =Math.floor(Math.random()*leng);
+    }
+}
+//随机产生颜色
+function colors() {
+    var r = Math.floor(Math.random()*256);
+    var g = Math.floor(Math.random()*256);
+    var b = Math.floor(Math.random()*256);
+    var rgb ="("+ r +","+g+","+b+")";
+    return rgb;
+}
+//将随机色与三个随机数匹配
+function  maxColors() {
+    list[one].style.backgroundColor  ="rgb"+colors();
+    list[two].style.backgroundColor = "rgb"+colors();
+    list[three].style.backgroundColor = "rgb"+colors();
+}
+
+
+var time;
+function runner(){   //点击开始颜色的变化
+    time = setInterval(function(){
+        begin();//调用随机数字
+        maxColors();//调用给随机数字加随机色
+        },2000);
+    }
+//setInterval()函数是循环调用其中的内容，先调用随机数函数，再调用给随机数匹配随机色函数
+//其中每次三个颜色变化后，又要改回默认值，则在产生随机数中改动，则两个函数循环调用时，
+//就可以清除颜色，再产生新的颜色了
+
+
+function recolor(){  //每次再把随机颜色改回默认颜色
+    for(var i = 0; i < list.length; i++){
+        if(list[i].style.backgroundColor != "#eaa6e8"){
+            list[i].style.backgroundColor="#eaa6e8"
+        }
+    }
+}
+
+function stopper() {   //点击停止颜色的变化
+    clearInterval(time);
+    for(var i = 0; i < list.length; i++){
+        list[i].style.backgroundColor = ' ';
+    }
+    if(document.getElementById("Stop").value =="点击暂停"){
+        document.getElementById("run").value ="点击继续";
+    }
+}
+
+				</script>
+			</head>
+			<body>
+			 <div class="content">
+				 <ul id="ul">
+					 <li><div class="li_div">1</div></li>
+					 <li><div class="li_div">2</div></li>
+					 <li><div class="li_div">3</div></li>
+					 <li><div class="li_div">4</div></li>
+					 <li><div class="li_div">5</div></li>
+					 <li><div class="li_div">6</div></li>
+					 <li><div class="li_div">7</div></li>
+					 <li><div class="li_div">8</div></li>
+					 <li><div class="li_div">9</div></li>
+				 </ul>
+				 <div class="btn">
+					 <form>
+						 <input type="button" value="点击开始" id="run" onclick="runner();">
+						 <input type="button" value="点击暂停" id="Stop" onclick="stopper();">
+					 </form>
+				 </div>
+			 </div>
+			</body>
+<!-- <head>
+	<meta charset="UTF-8">
+	<title>颜色随机的方块</title>
+	<style>
+	    html{
+	    	font-size: 10px;
+	    }
+	    *{
+	    	padding: 0;
+	    	margin: 0;
+	    }
+	    body{
+	    	width: 100%;
+	    }
+		.content{
+			width: 40rem;
+			height: 40rem;
+			margin: 20px auto;
+			background-color: #e2e2e2;
+			border-radius: 5px;
+		}
+        .box{
+        	height: 100%;
+        	width: 100%;
+        	display: flex;
+        	flex-flow: row wrap;
+        	list-style: none;
+        	justify-content: space-around;
+        	padding: 0.5rem;
+        	box-sizing: border-box;
+        }
+        .box>li{
+        	width: 33.3%;
+        	height: 33.3%;
+            padding: 0.5rem;
+            box-sizing: border-box;
+        	border-radius: 3px;
+        	text-align: center;
+        	line-height: 15rem;
+        }
+        .box>li>div{
+        	width: 100%;
+        	height: 100%;
+        	background-color: yellow;
+        }
+        .btn{
+        	width: 40rem;
+        	margin: 0 auto;	
+        }
+        .btn>div{
+        	height: 2rem;
+        	text-align: center;
+        	width: 20%;
+        	margin: 0.5rem auto;
+        	line-height: 2rem;
+           	background-color: #e6e6e6;
+        	border-radius: 0.5rem;
+        	cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+	<div class="content">
+	  <ul class="box">
+	  	<li><div class="let_style">1</div></li>
+	  	<li><div class="let_style">2</div></li>
+	  	<li><div class="let_style">3</div></li>
+	  	<li><div class="let_style">4</div></li>
+	  	<li><div class="let_style">5</div></li>
+	  	<li><div class="let_style">6</div></li>
+	  	<li><div class="let_style">7</div></li>
+	  	<li><div class="let_style">8</div></li>
+	  	<li><div class="let_style">9</div></li>
+	  </ul>
+      <div class="btn">
+      	<div id="run">点击开始</div>
+      	<div id="stop">点击结束</div>
+      </div>
+	</div>
+	<script>
+		var list = document.getElementsByClassName('let_style');
+		var run = document.getElementById('run');
+		var stop = document.getElementById('stop');
+		var time;
+		function begin() {
+            var one = Math.floor(Math.random()*list.length);
+            var two = Math.floor(Math.random()*list.length);
+            var three = Math.floor(Math.random()*list.length);
+            if(one == two){
+            	one = Math.floor(Math.random()*list.length);
+            }else if(two == three){
+            	two = Math.floor(Math.random()*list.length);
+            }else if(one = three){
+            	three = Math.floor(Math.random()*list.length);
+            }
+            list[one].style.backgroundColor = 'rgb'+ colors();
+            list[two].style.backgroundColor = 'rgb'+ colors();
+            list[three].style.backgroundColor = 'rgb'+ colors();
+		}
+        function colors() {
+        	var rgb;
+        	var r = Math.floor(Math.random()*265);
+        	var g = Math.floor(Math.random()*265);
+        	var b = Math.floor(Math.random()*265);
+        	rgb = '('+r+','+g+','+b+')';
+			return rgb;
+        }
+        run.onclick = function(){
+        	clearInterval(time);
+        	time = setInterval(function(){
+        		for(var i = 0; i < list.length; i++){
+        		   list[i].style.backgroundColor = '';
+        	    }
+        	    begin();
+ 
+        	},1000);
+        }
+        stop.onclick = function(){
+        	clearInterval(time);
+        	for(var i = 0; i < list.length; i++){
+        		list[i].style.backgroundColor = '';
+        	}
+        }
+	</script> 
+</body>-->
