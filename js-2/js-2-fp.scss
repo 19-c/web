@@ -1,0 +1,156 @@
+$clr-b-header: #29bde0;
+$clr-o: #fbb435;
+$clr-w: #ffffff;
+$clr-g: #9a9a9a;
+$clr-g-bg: #f0f0f0;
+
+@mixin w-h($width,$height) {
+    width:$width;
+    height:$height;
+}
+
+html,body,p,input,button,span{
+    margin: 0%;
+    padding: 0%;
+}
+button{
+    outline: none;
+}
+
+body{
+    background-color: $clr-g-bg;
+    font-size: 62.5%;
+}
+header{
+    background-color: $clr-b-header;
+    position: fixed;
+    top: 0;
+    @include w-h(100%, 4rem);
+    div{
+        @include w-h(15px, 15px);
+        border-top: 3px solid $clr-w;
+        border-left: 3px solid $clr-w;
+        transform: rotate(315deg);
+        position: absolute;
+        top: 1.5rem;
+        left: 20px;
+    }
+}
+main{
+    margin-top: 4.5rem;
+    padding: 0 10px;
+    .bgc{
+        background-color: $clr-w;
+        box-shadow: 0 0 1px $clr-g;
+        margin-bottom: 5px;
+    }
+    .content-1{
+        @include w-h(100%, 2.5rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    .content-2{
+        @include w-h(100%, 12rem);
+        display: flex;
+        justify-content: space-around;
+        span{
+            margin-top: 7px;
+            .circle{
+                @include w-h(30px, 30px);
+                border-radius: 50%;
+                background-color: $clr-o;
+            }
+            p{
+                margin-left: 5px;
+            }
+            .middle{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .span{
+                padding: 5px;
+            }
+        }
+    }
+    .content-3{
+        @include w-h(100%, 6rem);
+        .wrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+            p{
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .s-c{
+                font-size: 15px;
+                color: $clr-o;
+            }
+            input[type=text]{
+                @include w-h(40px, 35px);
+                text-align: center;
+                border: none;
+                background-color: $clr-g-bg;
+                color: $clr-o;
+                margin: 0 5px;
+            }
+        }
+    }
+    .content-4{
+        @include w-h(100%, 6rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 69%;
+            height: 5px;
+            background: -webkit-linear-gradient($clr-o, $clr-o) no-repeat;
+            background-size: 0% 100%;
+            // background-color: $clr-o;
+            outline: none;
+            cursor: pointer;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 2.5rem;
+            height: 1.5rem;
+            background: url(../js-2/fp-img/meun.png)no-repeat 0 0/cover;
+            margin-top: -10px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 5px;
+            box-shadow: inset 0 .125em .125em $clr-o; /*轨道内置阴影效果*/
+            
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        .jian {
+            background: url(../js-2/fp-img/jian.png) no-repeat 0 0/cover;;
+        }
+        .jia {
+            background: url(../js-2/fp-img/jia.png) no-repeat 0 0/cover;;
+        }
+        .style{
+            width: 1.2rem;
+            height: 1.2rem;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    button{
+    @include w-h(100%, 50px);
+        font-size: 20px;
+        color: $clr-w;
+        background-color: $clr-o;
+        border: none;
+        cursor: pointer;
+    }
+}

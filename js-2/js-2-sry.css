@@ -1,0 +1,173 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: #29bde0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: #29bde0;
+  top: 0;
+  color: #ffffff;
+  font-size: 22px;
+  z-index: 1;
+}
+
+header .padding {
+  padding: 10px 0;
+}
+
+header .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header-top img, header .header-top div {
+  width: 25px;
+  height: 25px;
+  margin: 0 25px;
+}
+
+header .header-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b9e9f5;
+  color: #464646;
+  padding-left: 40px;
+  padding-right: 22px;
+  font-size: 13px;
+  position: relative;
+}
+
+header .header-middle > img {
+  width: 30px;
+  height: 30px;
+}
+
+header .header-middle audio {
+  position: absolute;
+  transform: rotate(180deg);
+  right: 12px;
+  opacity: 0;
+  width: 10rem;
+}
+
+header .header-bottom {
+  position: relative;
+  padding-left: 49px;
+  font-size: 12px;
+}
+
+header .header-bottom .triangle {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #b9e9f5;
+  position: absolute;
+  top: 0;
+  left: 49px;
+}
+
+main {
+  margin: 13rem 0 9rem 0;
+}
+
+main .player {
+  position: relative;
+  display: inline-block;
+  width: 21vw;
+  height: 31vw;
+  margin: 0 5.5%;
+}
+
+main .player:hover .box {
+  display: block;
+}
+
+main .player .menu {
+  width: 100%;
+  height: auto;
+  font-size: 4.5vw;
+  border: 2px solid #ffffff;
+}
+
+main .player .menu .status1 {
+  height: 80%;
+  margin: 0;
+  text-align: center;
+  line-height: 16.8vw;
+  background-color: #f5c97b;
+}
+
+main .player .menu .number {
+  height: 20%;
+  margin: 0;
+  font-size: 3vw;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83b09a;
+}
+
+main .player .box {
+  display: none;
+}
+
+main .player .box .choose {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 8vw;
+  border: 2px solid #29bde0;
+}
+
+main .player .box .choose .icon1 {
+  width: 5vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+  background-size: 3vw 3vw;
+  background-position: 1vw 1vw;
+  background-color: #fff;
+}
+
+main .player .box .choose .icon1 {
+  background-image: url(../css-13/img-2/dao.png);
+}
+
+footer {
+  width: 100%;
+  height: 7.5rem;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #29bde0;
+}
+
+footer button {
+  width: 80%;
+  height: 50px;
+  background-color: #fbb435;
+  border: 5px solid #fbb435;
+  color: #fff;
+  font-size: 20px;
+}

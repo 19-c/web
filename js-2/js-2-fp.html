@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="js-2-fp.css">
+    <title>js-2</title>
+</head>
+<body>
+    <header>
+        <div onclick="window.location='js-2-pb.html'"></div>
+    </header>
+    <main class="wrap">
+        <div class="content-1 bgc">玩家配比</div>
+        <div class="content-2 bgc">
+            <!-- <div class="wrap"> -->
+            <span>
+                <div class="circle middle"></div>
+                <p class="middle">杀手<span class="span" id="renshu1">1</span>人</p>
+            </span>
+            <span>
+                <div class="circle middle"></div>
+                <p class="middle">平民<span class="span" id="renshu2">3</span>人</p>
+            </span>
+            <!-- </div> -->
+        </div>
+        <div class="content-3 bgc">
+            <div class="wrap">
+                <p>请输入玩家数量</p>
+                <input type="text" id="textNumber" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                <p class="s-c">玩家数量为4-18</p>
+            </div>
+        </div>
+        <div class="content-4 bgc">
+            <input type="button" class="jian style" onclick="btLeft()">
+            <input type="range" id="rangeNumber" min="4" max="18" step="1" >
+            <input type="button" class="jia style" onclick="btRight()">
+        </div>
+        <button onclick="baocuo()">
+            去发牌
+        </button>
+    </main>
+    <script src="js-2-fp.js"></script>
+</body>
+</html>

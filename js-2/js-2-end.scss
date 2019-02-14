@@ -1,0 +1,84 @@
+$clr-red: #f66f6f;
+$clr-blue: #29bde0;
+$clr-skyblue: #b9e9f5;
+$clr-orange: #fbb435;
+$clr-gray: #a6a6a6;
+
+$border: 1px solid $clr-skyblue;
+
+@mixin flex-aj($a, $b) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+}
+@mixin w-h($a, $b) {
+    width: $a;
+    height: $b;
+}
+
+html {
+    font-size: 62.5%;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+    font-size: 15px;
+    color: #fff;
+    background-color: $clr-blue;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    @include flex-aj(center,space-between );
+    font-size: 20px;
+    background-color: $clr-blue;
+    border-bottom: $border;
+    img,div{
+        @include w-h(25px,25px );
+        margin: 3%;
+    }
+}
+main{
+    padding: 4% 10% 10px 10%; 
+    .top{
+        text-align: center;
+        img{
+            width: 220px;
+        }
+    }
+    p{
+        margin: 40px 0 10px 0;
+    }
+    .left{
+        margin-left: 50px;
+    }
+}
+.showresult{
+    padding: 0 2%;
+    margin-bottom: 7.5rem; 
+    .day-wrap{
+        background-color: #fff;
+        color: $clr-gray;
+        height: 69px;
+        line-height: 22px;
+        padding: 0 8%;
+        margin-bottom: 5px;
+    }
+}
+footer{
+    @include flex-aj(center, center);
+    @include w-h(100%, 7rem);
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(41,189,224,0.5);
+    button{
+        @include w-h(80%, 50px);
+        background-color: #fbb435;
+        border: 5px solid #fbb435;
+        color: #fff;
+        font-size: 20px;
+    }
+}

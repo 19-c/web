@@ -1,0 +1,154 @@
+$clr-b-header: #29bde0;
+$clr-b-main: #69d1e9;
+$clr-o: #fbb435;
+$clr-g: #9a9a9a;
+$clr-g-bg: #f0f0f0;
+$clr-w: #ffffff;
+
+$font-17: 17px;
+$font-18: 18px;
+$font-12: 12px;
+$font-16: 16px;
+
+$border: 1px solid $clr-g;
+
+@mixin flex-a($a) {
+    display: flex;
+    align-items: $a;
+}
+@mixin flex-aj($a, $b) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+}
+@mixin flex-af($a,$b){
+    display: flex;
+    align-items:$a;
+    flex-direction: $b;
+}
+@mixin flex-ajf($a, $b, $c) {
+    display: flex;
+    align-items: $a;
+    justify-content: $b;
+    flex-direction: $c;
+}
+@mixin box($width,$height) {
+    width:$width;
+    height:$height;
+}
+@mixin position($pos,$t,$r) {
+    position: $pos;
+    top: $t;
+    right: $r;
+}
+
+html {
+    font-size: 62.5%;
+}
+a {
+    text-decoration: none;
+}
+p,
+ul{
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $clr-g-bg;
+    color: $clr-g;
+}
+
+header{
+    @include box(100%,4rem );
+    background-color: $clr-b-header;
+}
+.wrap{
+    @include flex-af(center,column );
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1% 10% 0 10%;
+    .main{
+        @include box(100%,auto );
+        @include flex-ajf(center,center ,column );
+        border: $border;
+        background-color: $clr-w;
+        text-align: center;
+        line-height: 4.5rem;
+        font-size: $font-17;
+        white-space: nowrap;
+        margin-bottom: 7%;
+        position: relative;
+        .go:after, .go:before{
+            content: "";
+            @include box(0,0 );
+            border: 11px solid transparent;
+            border-left-color: $clr-g-bg;
+            position: absolute;
+            top:17px;
+            right:2px;
+        }
+        .go:after{
+            top:17px;
+            right:7px;
+            border-left-color: $clr-w;
+        }
+        .content-top{
+            @include box(100%,auto );
+            color: $clr-o;
+            border-bottom: 1px solid $clr-o;
+            font-size: $font-18;
+        }
+        p{
+            font-size: $font-12;
+        }
+        .content-next{
+            @include box(69%,60px );
+            background-color: $clr-b-main;
+            color: $clr-w;
+            font-size: $font-16;
+        }
+        .margin-top{
+            margin-top: 20px;
+        }
+        .dot{
+            width: 84px;
+            height: 26px;
+            color: white;
+            margin-bottom: 2px;
+            margin-top: -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #f0f0f0;
+                margin:0 2px;
+            }
+            .color{
+                background-color: #29bde0;
+            }
+        }
+        .triangle{
+            content: "";
+            @include box(0,0 );
+            border: 20px solid transparent;
+            border-left-color: $clr-o;
+            position: absolute;
+            top: 46%;
+            left: 89%;
+        }
+    }
+}

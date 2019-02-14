@@ -1,0 +1,136 @@
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #9a9a9a;
+}
+
+header {
+  width: 100%;
+  height: 4rem;
+  background-color: #29bde0;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1% 10% 0 10%;
+}
+
+.wrap .main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #9a9a9a;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 4.5rem;
+  font-size: 17px;
+  white-space: nowrap;
+  margin-bottom: 7%;
+  position: relative;
+}
+
+.wrap .main .go:after, .wrap .main .go:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 11px solid transparent;
+  border-left-color: #f0f0f0;
+  position: absolute;
+  top: 17px;
+  right: 2px;
+}
+
+.wrap .main .go:after {
+  top: 17px;
+  right: 7px;
+  border-left-color: #ffffff;
+}
+
+.wrap .main .content-top {
+  width: 100%;
+  height: auto;
+  color: #fbb435;
+  border-bottom: 1px solid #fbb435;
+  font-size: 18px;
+}
+
+.wrap .main p {
+  font-size: 12px;
+}
+
+.wrap .main .content-next {
+  width: 69%;
+  height: 60px;
+  background-color: #69d1e9;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.wrap .main .margin-top {
+  margin-top: 20px;
+}
+
+.wrap .main .dot {
+  width: 84px;
+  height: 26px;
+  color: white;
+  margin-bottom: 2px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap .main .dot div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  margin: 0 2px;
+}
+
+.wrap .main .dot .color {
+  background-color: #29bde0;
+}
+
+.wrap .main .triangle {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left-color: #fbb435;
+  position: absolute;
+  top: 46%;
+  left: 89%;
+}
