@@ -2,6 +2,8 @@ var textNumber = document.getElementById("textNumber");
 var rangeNumber = document.getElementById("rangeNumber");
 var renshu1 = document.getElementById("renshu1");
 var renshu2 = document.getElementById("renshu2");
+var r1 = document.getElementsByClassName('span')[0];
+var r2 = document.getElementsByClassName('span')[1];
 
 // 进度条的初始值/文本框初始值/文本框最大长度
 textNumber.value=4;
@@ -16,8 +18,10 @@ textNumber.oninput = function getNumber(){
     rangeNumber.setAttribute('style','background-size:'+len + '% 100%');
     var x = rangeNumber.value;
     if(textNumber.value < 4 || textNumber.value > 18){
-        renshu1.innerHTML = 0;
-        renshu2.innerHTML = 0;
+        // renshu1.innerHTML = 0;
+        // renshu2.innerHTML = 0;
+        r1.innerHTML = 0;
+        r2.innerHTML = 0;
     }else if(x == 15 || x == 18) {
         renshu1.innerHTML = Math.floor(x/3-1);
         renshu2.innerHTML = x-renshu1.innerHTML;

@@ -232,3 +232,15 @@ for(let p = 1;p <= day;p++){
     }
     
 }
+// $('#box').click(function(){
+//     alert('123')
+// })
+
+// var box = document.getElementById('box')
+// var $box = $(box)
+
+// var $box = $('#box')[0]
+// // var box = $box
+// $box.click(function(){
+//     alert('123')
+// })
